@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+    
+    
+   
+    travel-reviews:        
+        build: OnlineTravel_Sprint1
+        ports:
+        - 8090:8090
+     
+  
+
+    postgres:        
+        image: postgres:14.5
+        ports:
+        - 5432:5432
+       
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: pgadmin
+            POSTGRES_DB: travelreviewsdb
+
+       
+ 
